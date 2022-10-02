@@ -5,7 +5,7 @@ const cors=require('cors')
 
 
 const port=3000;
-mongoose.connect("mongodb://localhost:27017/authdata",{
+mongoose.connect("mongodb+srv://satya:PASSWORD@cluster0.cdu8w6s.mongodb.net/?retryWrites=true&w=majority",{
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
