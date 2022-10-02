@@ -4,6 +4,7 @@ const RegisterUser=require("./model")
 const jwt=require("jsonwebtoken")
 const middelware=require('./middleware')
 
+
 router.post("/register",async(req,res)=>{
     try{
         const {email,password,confirmpassword,username}=req.body
@@ -67,12 +68,10 @@ router.get("/profile",middelware,async(req,res)=>{
             return res.status(400).send("User Not Found")
         }
         res.json(exist)
-
     }
     catch(err){
         res.status(404).send("Server Error")
     }
-
 })
 
  
