@@ -16,7 +16,9 @@ app.use(cors({origin:"*"}))
 app.use(express.json())
 app.use("/start",require("./controller"))
 
-
+app.get("/",(req,res)=>{
+    res.send("Hello Application")
+})
 
 app.listen(process.env.port || port,()=>{
     console.log("server Is Running...")
