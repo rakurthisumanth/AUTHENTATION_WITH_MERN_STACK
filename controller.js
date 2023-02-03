@@ -61,18 +61,18 @@ router.post("/login",async(req,res)=>{
 
 })
 
-router.get("/profile",middelware,async(req,res)=>{
-    try{
-        let exist=await RegisterUser.findById(req.user.id)
-        if(!exist){
-            return res.status(400).send("User Not Found")
-        }
-        res.json(exist)
-    }
-    catch(err){
-        res.status(404).send("Server Error")
-    }
-})
+// router.get("/profile",middelware,async(req,res)=>{
+//     try{
+//         let exist=await RegisterUser.findById(req.user.id)
+//         if(!exist){
+//             return res.status(400).send("User Not Found")
+//         }
+//         res.json(exist)
+//     }
+//     catch(err){
+//         res.status(404).send("Server Error")
+//     }
+// })
 
  
 
